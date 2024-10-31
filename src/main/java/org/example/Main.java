@@ -27,7 +27,7 @@ public class Main {
       JAXBContext jaxbContext = JAXBContext.newInstance(University.class);
       Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
       Path currentRelativePath = Paths.get("");
-      String path = currentRelativePath.toAbsolutePath() + "\\src\\main\\java\\org\\example\\timetable.xml";
+      String path = currentRelativePath.toAbsolutePath() + File.separator + "src" + File.separator + "main" + File.separator + "java" + File.separator + "org" + File.separator + "example" + File.separator + "timetable.xml";
       JAXBElement<University> jaxbElement = (JAXBElement<University>) jaxbUnmarshaller.unmarshal(new File(path));
       University university = jaxbElement.getValue();
       
